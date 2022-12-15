@@ -11,41 +11,17 @@ export const Projects = () => {
 
     const frontEndProjects = [
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Landing Page",
+            description: "Using Html & Css Only",
             imgUrl: projImg1,
             projectLink: '#',
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Movie",
+            description: "Using Html Css Javascript",
             imgUrl: projImg1,
             projectLink: '#',
-        },
-        {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg1,
-            projectLink: '#',
-        },
-        {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg1,
-            projectLink: '#',
-        },
-        {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg1,
-            projectLink: '#',
-        },
-        {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg1,
-            projectLink: '#',
-        },
+        }
     ];
 
     return (
@@ -56,18 +32,17 @@ export const Projects = () => {
                         <TrackVisibility>
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                                    <h2>Projects</h2>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <h2 className="mb-5">Projects</h2>
                                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                                        <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                                            <Nav.Item>
-                                                <Nav.Link eventKey="first">Front End Projects</Nav.Link>
+                                        <Nav variant="pills" className="nav-pills mb-5 flex-column flex-md-row justify-content-evenly " id="pills-tab">
+                                            <Nav.Item size={12} md={4} >
+                                                <Nav.Link eventKey="first" >Front End Projects</Nav.Link>
                                             </Nav.Item>
-                                            <Nav.Item>
-                                                <Nav.Link eventKey="second">BackEnd Projects</Nav.Link>
+                                            <Nav.Item sm={12} md={4}>
+                                                <Nav.Link eventKey="second">Vue Projects</Nav.Link>
                                             </Nav.Item>
-                                            <Nav.Item>
-                                                <Nav.Link eventKey="third">Presentation Design Projects</Nav.Link>
+                                            <Nav.Item sm={12} md={4} >
+                                                <Nav.Link eventKey="third">React Projects</Nav.Link>
                                             </Nav.Item>
                                         </Nav>
                                         <Tab.Content id="slideInUp"

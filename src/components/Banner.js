@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../asserts/img/header.png";
-import  ArrowRight  from '../asserts/icon/arrow-right.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -11,7 +10,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Frontend Developer", "Backend Developer" ];
+  const toRotate = ["Frontend Web Developer", "Vue JS Developer" , "React JS Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -54,34 +53,38 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div 
-              className={isVisible ? "animate__animated animate__fadeIn" : ""}
-              >
-                <span className="tagline">Welcome To My Portfolio</span>
-                <h1>{`Hi! I'm Dima`} <span className="txt-rotate" 
-                dataPeriod="1000" data-rotate='[ "Web Developer", "Frontend Developer", "Backend Developer" ]'
-                ><span className="wrap">
-                    {text}
-                    </span></span></h1>
-                  <p>Full stack web Developer | Informatics Engineer | Experienced with Node js and React</p>
-                  <button onClick={() => console.log('connect')}>
-                    Let’s Connect  
-                  <img src={ArrowRight} alt="Header Img"/>
-                  </button>
-              </div>
-               }
-            </TrackVisibility> 
-          </Col>
-          <Col xs={12} md={6} xl={5}>
-             <TrackVisibility>
-              {({ isVisible }) => 
                 <div
-                 className={isVisible ? "animate__animated animate__zoomIn" : ""}
-                 >
-                  <img className="header-img" src={headerImg} alt="Header Img"/>
+                  className={isVisible ? "animate__animated animate__fadeIn" : ""}
+                >
+                  <span className="tagline">Welcome To My Portfolio</span>
+                  <h1>{`Hi! I'm Dima Kassem`} <span className="txt-rotate"
+                    dataPeriod="1000" data-rotate='[  "Frontend Web Developer", "Vue JS Developer" , "React JS Developer" ]'
+                  ><span className="wrap">
+                      {text}
+                    </span></span></h1>
+                  <p> Informatics Engineer | Frontend Web Developer | Experienced with Vue and React</p>
+                  <button onClick={() => console.log('connect')}>
+                    <a style={{
+                      textDecoration: 'none',
+                      color: 'inherit'
+                    }} href="#connect"> Let’s Connect </a>
+
+
+                  </button>
                 </div>
-                }
-            </TrackVisibility> 
+              }
+            </TrackVisibility>
+          </Col>
+          <Col  md={6} xl={5} className="d-none d-sm-none d-md-block">
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div
+                  className={isVisible ? "animate__animated animate__zoomIn" : ""}
+                >
+                  <img className="header-img" src={headerImg} alt="Header Img" />
+                </div>
+              }
+            </TrackVisibility>
           </Col>
         </Row>
       </Container>

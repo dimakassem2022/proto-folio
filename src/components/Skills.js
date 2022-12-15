@@ -1,9 +1,10 @@
 // import meter1 from "../assets/img/meter1.svg";
 // import meter2 from "../assets/img/meter2.svg";
 // import meter3 from "../assets/img/meter3.svg";
-import Carousel from 'react-multi-carousel';
-import { Row, Col ,Container} from "react-bootstrap";
+import Carousel  from 'react-multi-carousel';
+import { Row, Col, Container } from "react-bootstrap";
 import 'react-multi-carousel/lib/styles.css';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 // import arrow1 from "../assets/img/arrow1.svg";
 // import arrow2 from "../assets/img/arrow2.svg";
 // import colorSharp from "../assets/img/color-sharp.png"
@@ -30,96 +31,57 @@ export const Skills = () => {
     };
 
     return (
-        <section className="skill" id="skills">
+        <section className="skill" id="skills" >
             <Container>
                 <Row>
                     <Col size={12}>
-                        <div className="skill-bx wow zoomIn">
+                        <div className="skill-bx wow bg-dark">
                             <h2>Skills</h2>
-                            <p>lorem</p>
                             <Carousel responsive={responsive}
-                            autoPlay={ true }
-                            autoPlaySpeed={1000 * 2}
-                             infinite={true} 
-                             className="owl-carousel owl-theme skill-slider">
+                                // autoPlay={true}
+                                autoPlaySpeed={1000 * 3}
+                                infinite={true}
+                                renderButtonGroupOutside
+                                className="skill-slider">
                                 <div className="item ">
+                                    <h4>Basic Front End</h4>
                                     <Row>
-                                        <Col xs={6} md={6} xl={6} className='skill-title'>NODE JS</Col>
-                                        <Col xs={6} md={6} xl={6}>
-                                            <div className="g-purple" style={{ width: '75%' }}>75%</div>
+                                        <Col xs={12} md={3} xl={3} className='skill-title'>Html</Col>
+                                        <Col xs={12} md={9} xl={9} style={{ margin: 'auto 0' }}>
+                                            <ProgressBar animated striped variant="success" now={80} label={`${80}%`} />                                            
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs={6} md={6} xl={6} className='skill-title'>REACT</Col>
-                                        <Col xs={6} md={6} xl={6} >
-                                            <div className="g-purple" style={{ width: '70%' }}>70%</div>
+                                    <Col xs={12} md={3} xl={3} className='skill-title'>Css</Col>
+                                        <Col xs={12} md={9} xl={9} style={{ margin: 'auto 0' }}>
+                                            <ProgressBar animated striped variant="success" now={90} label={`${90}%`} />                                            
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs={6} md={6} xl={6} className='skill-title'>NEXTJS</Col>
-                                        <Col xs={6} md={6} xl={6} >
-                                            <div className="g-purple" style={{ width: '70%' }}>70%</div> 
-                                              </Col>
-                                    </Row>
-
-                                </div>
-                                <div className="item ">
-                                    <Row>
-                                        <Col xs={6} md={6} xl={6} className='skill-title'>HTML</Col>
-                                        <Col xs={6} md={6} xl={6} >
-                                            <div className="g-purple" style={{ width: '95%' }}>95%</div>
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col xs={6} md={6} xl={6} className='skill-title'>CSS</Col>
-                                        <Col xs={6} md={6} xl={6}   >
-                                           <div className="g-purple" style={{width:'100%'}}>100%</div>   
-                                            </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col xs={6} md={6} xl={6} className='skill-title'>JAVASCRIPT</Col>
-                                        <Col xs={6} md={6} xl={6}  >
-                                            <div className="g-purple" style={{ width: '95%' }}>95%</div>  
-                                             </Col>
-                                    </Row>
-                                </div>
-                                <div className="item ">
-                                    <Row>
-                                        <Col xs={6} md={6} xl={6} className='skill-title'>MYSQL</Col>
-                                        <Col xs={6} md={6} xl={6}  >
-                                            <div className="g-purple" style={{ width: '90%' }}>90%</div>  
-                                             </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col xs={6} md={6} xl={6} className='skill-title'>KNEX</Col>
-                                        <Col xs={6} md={6} xl={6}  >
-                                        <div className="g-purple" style={{ width: '80%' }}>80%</div>  
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col xs={6} md={6} xl={6} className='skill-title' >OBJECTION JS</Col>
-                                        <Col xs={6} md={6} xl={6}  >
-                                        <div className="g-purple" style={{ width: '60%' }}>60%</div>  
+                                    <Col xs={12} md={3} xl={3} className='skill-title'>Javascript</Col>
+                                        <Col xs={12} md={9} xl={9} style={{ margin: 'auto 0' }}>
+                                            <ProgressBar animated striped variant="success" now={80} label={`${80}%`} />                                            
                                         </Col>
                                     </Row>
                                 </div>
                                 <div className="item ">
+                                    <h4>Javascript Frameworks</h4>
                                     <Row>
-                                        <Col xs={6} md={6} xl={6} className='skill-title'>EXPRESS</Col>
-                                        <Col xs={6} md={6} xl={6}  >
-                                            <div className="g-purple" style={{ width: '80%' }}>80%</div>  
+                                        <Col xs={12} md={3} xl={3} className='skill-title'>JQuery</Col>
+                                        <Col xs={12} md={9} xl={9} style={{ margin: 'auto 0' }}>
+                                            <ProgressBar animated striped variant="primary" now={80} label={`${100}%`} />                                            
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs={6} md={6} xl={6} className='skill-title'>GraphQl</Col>
-                                        <Col xs={6} md={6} xl={6}  >
-                                            <div className="g-purple" style={{ width: '40%' }}>40%</div>  
+                                    <Col xs={12} md={3} xl={3} className='skill-title'>React</Col>
+                                        <Col xs={12} md={9} xl={9} style={{ margin: 'auto 0' }}>
+                                            <ProgressBar animated striped variant="warning" now={90} label={`${50}%`} />                                            
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs={6} md={6} xl={6} className='skill-title'>JQUERY</Col>
-                                        <Col xs={6} md={6} xl={6}  >
-                                            <div className="g-purple" style={{ width: '90%' }}>90%</div>  
+                                    <Col xs={12} md={3} xl={3} className='skill-title'>Vue</Col>
+                                        <Col xs={12} md={9} xl={9} style={{ margin: 'auto 0' }}>
+                                            <ProgressBar animated striped variant="success" now={80} label={`${70}%`} />                                            
                                         </Col>
                                     </Row>
                                 </div>
@@ -128,7 +90,6 @@ export const Skills = () => {
                     </Col>
                 </Row>
             </Container>
-            {/* <img className="background-image-left" src={colorSharp} alt="Image" /> */}
-        </section>
+              </section>
     )
 }

@@ -1,4 +1,29 @@
+
+:root {
+	/* SCSS HEX */
+--azure-x-11-web-color: #F1FEFFff;
+--lavender-floral: #9F84E3ff;
+--russian-violet: #362A63ff;
+--castleton-green: #235A43ff;
+--royal-purple: #704DBAff;
+--black: #010101ff;
+/* SCSS Gradient */
+--gradient-top: linear-gradient(0deg, #F1FEFFff, #9F84E3ff, #362A63ff, #235A43ff, #704DBAff, #010101ff);
+--gradient-right: linear-gradient(90deg, #F1FEFFff, #9F84E3ff, #362A63ff, #235A43ff, #704DBAff, #010101ff);
+--gradient-bottom: linear-gradient(180deg, #F1FEFFff, #9F84E3ff, #362A63ff, #235A43ff, #704DBAff, #010101ff);
+--gradient-left: linear-gradient(270deg, #F1FEFFff, #9F84E3ff, #362A63ff, #235A43ff, #704DBAff, #010101ff);
+--gradient-top-right: linear-gradient(45deg, #F1FEFFff, #9F84E3ff, #362A63ff, #235A43ff, #704DBAff, #010101ff);
+--gradient-bottom-right: linear-gradient(135deg, #F1FEFFff, #9F84E3ff, #362A63ff, #235A43ff, #704DBAff, #010101ff);
+--gradient-top-left: linear-gradient(225deg, #F1FEFFff, #9F84E3ff, #362A63ff, #235A43ff, #704DBAff, #010101ff);
+--gradient-bottom-left: linear-gradient(315deg, #F1FEFFff, #9F84E3ff, #362A63ff, #235A43ff, #704DBAff, #010101ff);
+--gradient-radial: radial-gradient(#F1FEFFff, #9F84E3ff, #362A63ff, #235A43ff, #704DBAff, #010101ff);
 /* custom font */
+  }
+
+
+
+
+
 @font-face {
 	font-family: Cairo;
 	src: url("asserts/fonts/Cairo-Bold.ttf");
@@ -141,6 +166,9 @@ span.navbar-text {
 	line-height: 1;
 	border: 1px solid rgba(255, 255, 255, 0.5);
 }
+.social-icon a:hover{
+	cursor: pointer;
+}
 .social-icon a::before {
 	content: "";
 	width: 42px;
@@ -255,11 +283,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
 	margin-top: 0;
-	padding: 260px 0 100px 0;
-	background-image: url("./asserts/img/galaxy-background-with-falling-star-space-galaxy-illustration-free-vector.jpg");
-	background-position: top center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	padding: 260px 10px 0;
+	
 	color: #fff;
 }
 .banner .tagline {
@@ -294,16 +319,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	letter-spacing: 0.8px;
 	display: flex;
 	align-items: center;
+	transition: 0.3s ease-in-out;
 }
 
-.banner button img {
-	width: 15px;
-	margin-left: 10px;
-	margin-top: 10px;
-	transition: 0.3s ease-in-out;
-	line-height: 1;
-}
-.banner button:hover img {
+
+.banner button:hover  {
 	margin-left: 25px;
 }
 .header-img {
@@ -326,31 +346,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .skill {
-	padding: 40px 0;
 	position: relative;
 	color: #fff;
+   
 }
 .skill-bx {
-	background: #151515;
-	border-radius: 64px;
+	border-radius: 25px;
 	text-align: center;
-	padding: 60px 50px;
+	padding: 15px;
 	margin: 60px 0;
 }
 .skill h2 {
 	font-size: 45px;
 	font-weight: 700;
+	border-bottom: solid 5px var(--royal-purple);
+    width: fit-content;
+    margin: auto;
+    border-radius: 5px;
+    padding-bottom: 10px;
 }
-.skill p {
-	color: #b8b8b8;
-	font-size: 18px;
-	letter-spacing: 0.8px;
-	line-height: 1.5em;
-	margin: 14px 0 75px 0;
-}
+
 .skill-slider {
-	width: 80%;
-	margin: 0 auto;
+	width: 90%;
+	margin: 15px auto;
 	position: relative;
 }
 .skill-slider .item {
@@ -362,57 +380,41 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-.g-purple {
-	background: linear-gradient(to left, #743ad5, #d53a9d);
-	color: #fff;
-	border-radius: 0 50px;
-	margin: 10px 0;
-}
 
-.background-image-left {
-	top: 28%;
-	position: absolute;
-	bottom: 0;
-	width: 40%;
-	z-index: -4;
-}
+
 /************ Projects Css ************/
 .project {
-	padding: 40px 0;
-	position: relative;
-	background-color: black;
+	position: relative;	
 }
 .project h2 {
 	font-size: 45px;
 	font-weight: 700;
 	text-align: center;
+	color:white;
+	border-bottom: dotted 2px var(--royal-purple);
+	margin: auto;
+    padding: 5px 0px 10px;
+    border-bottom-right-radius: 15px;
+	border-top: dotted 2px var(--royal-purple);
+    border-top-left-radius: 15px;
 }
-.project p {
-	color: #b8b8b8;
-	font-size: 18px;
-	letter-spacing: 0.8px;
-	line-height: 1.5em;
-	margin: 14px auto 30px auto;
-	text-align: center;
-	width: 56%;
-}
+
 .project .nav.nav-pills {
 	width: 72%;
 	margin: 0 auto;
 	border-radius: 50px;
-	background-color: rgb(255 255 255 / 10%);
+	border: solid 1px white;
+	background-color: rgb(255 255 255 / 52%);
 	overflow: hidden;
 }
-.project .nav.nav-pills .nav-item {
-	width: 33.33333%;
-}
+
 .project .nav.nav-pills .nav-link {
 	background-color: transparent;
 	border-radius: 0;
 	padding: 17px 0;
 	color: #fff;
 	width: 100%;
-	font-size: 17px;
+	font-size: 20px;
 	letter-spacing: 0.8px;
 	font-weight: 500;
 	position: relative;
@@ -420,23 +422,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	text-align: center;
 	z-index: 0;
 }
-.project .nav.nav-pills .nav-link::before {
-	content: "";
-	position: absolute;
-	width: 0;
-	height: 100%;
+
+ .project .nav.nav-pills .nav-link.active {
+	
 	background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
-	top: 0;
-	left: 0;
-	z-index: -1;
-	transition: 0.3s ease-in-out;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
-.project .nav.nav-pills .nav-link.active::before {
-	width: 100% !important;
+.project .nav.nav-pills .nav-link:hover {
+	font-size: 24px;
 }
-.project .nav.nav-pills .nav-link.active {
-	border: 1px solid rgba(255, 255, 255, 1);
-}
+/*
 .nav-link#projects-tabs-tab-first {
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-radius: 55px 0px 0px 55px;
@@ -448,7 +444,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .nav-link#projects-tabs-tab-third {
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-radius: 0 55px 55px 0;
-}
+} */
+
 .proj-imgbx {
 	position: relative;
 	border-radius: 30px;
@@ -506,7 +503,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ contact Css ************/
 .contact {
 	padding: 50px 0;
-	background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
 }
 .contact img {
 	width: 92%;
@@ -515,6 +511,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	font-size: 45px;
 	font-weight: 700;
 	margin-bottom: 30px;
+	color: antiquewhite;
 }
 .contact form input,
 .contact form textarea {
@@ -581,10 +578,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Footer Css ************/
 .footer {
 	padding: 50px 0;
-	/* background-image: url('./assets/img/footer-bg.png'); */
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	
 }
 .newsletter-bx {
 	background: #ffffff;
@@ -695,3 +689,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 		transform: rotate(360deg);
 	}
 }
+
+.bg {
+	/* The image used */
+	background-image: url("./asserts/img/galaxy-background-with-falling-star-space-galaxy-illustration-free-vector.jpg");
+  
+	/* Full height */
+	height: 100%; 
+  
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+  

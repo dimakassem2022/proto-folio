@@ -5,7 +5,7 @@ import { SocialIcon } from "./SocialIcon";
 
 export const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer bg-dark">
       <Container>
         <Row className="align-items-center">
           {/* <MailchimpForm /> */}

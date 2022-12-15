@@ -1,2 +1,2 @@
 # proto-folio
-hello every one I am web developer nd this is my proto-folio website
+hello every one I am frontend web developer and this is my proto-folio website

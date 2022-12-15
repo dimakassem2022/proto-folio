@@ -25,35 +25,32 @@ export const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // let response = await fetch("mailto:dimakassen296@gmail.com", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json;charset=utf-8",
+    //   },
+    //   body: JSON.stringify(formDetails),
+    // });
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
+    setTimeout(() => {
+         setButtonText("Send");
+    }, 5000);
+
+    let result = 'done';// await response.json();
     setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: 'Message sent successfully'});
-    } else {
-      setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
-    }
+    // if (result.code == 200) {
+    //   setStatus({ succes: true, message: 'Message sent successfully'});
+    // } else {
+    //   setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
+    // }
   };
 
   return (
     <section className="contact" id="connect">
       <Container>
-        <Row className="align-items-center">
-          <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us"/>
-              }
-            </TrackVisibility> 
-          </Col>
+        <Row className="align-items-center justify-content-center">
           <Col size={12} md={6}>
              <TrackVisibility>
               {({ isVisible }) => 
